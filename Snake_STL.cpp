@@ -10,6 +10,7 @@
 
 
 #include "Snake.h"
+#include "board.h"
 
 using namespace std;
 
@@ -24,15 +25,18 @@ int main()
 
 
 Snake Snake1;
-
+board board1;
 
 auto key=getch();
+
+
 
 while(TRUE)
 {
 	key=getch();
 	Snake1.SnakeMove(key);
 	Snake1.SnakePrint();
+	board1.AddRandomSegment();
 }
 
     endwin();

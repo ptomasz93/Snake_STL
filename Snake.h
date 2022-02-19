@@ -11,19 +11,12 @@
 #include <list>
 #include <ncurses.h>
 
-struct segment
+#include "board.h"
+
+
+class Snake
+		: public board
 {
-	int x;
-	int y;
-	 segment(int xinit, int yinit) : x(xinit), y(yinit) {}
-	 void print()
-	 {
-		printw(" %d  %d \n" ,x , y);
-	 }
-
-};
-
-class Snake {
 
 	enum direction {down=258, up=259, left=260, right=261};
 	std::list<segment> SnakeBody;
